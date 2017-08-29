@@ -9,13 +9,29 @@
  	function reverse()
  	{
  		var val=document.getElementById('str').value ;
+ 		var rev;
  		for(var i=0 ; i<val.length ; i++ )
  		{
- 		var rev = (122-((val.charCodeAt(i))-97));
- 	    var code = String.fromCharCode(rev);
- 	    document.write(code);
- 	}
- }
+ 			var chcode =val.charCodeAt(i);
+ 			if( chcode<91)
+ 			{
+ 		      rev = (90-(chcode-65));
+ 		      
+ 			}
+ 			else if(chcode>96)
+ 			{
+ 		     rev = (122-(chcode-97));
+ 		     
+ 	         }
+ 	         else
+ 	         {
+ 	         	document.write("Default Value ");
+ 	         }
+ 	          var code = String.fromCharCode(rev);
+ 	          document.write(code);
+ 
+		}
+	}
 </script>
 <input type="text" id="str" />
 <input type="button" onclick="reverse();" value="Reverse" />
