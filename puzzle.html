@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PUZZLE</title>
+<script type = "text/javaScript"></script>
+</head>
+<body>
+<script>
+ 	function reverse()
+ 	{
+ 		var val=document.getElementById('str').value ;
+ 		for(var i=0 ; i<val.length ; i++ )
+ 		{
+ 		var rev = (122-((val.charCodeAt(i))-97));
+ 	    var code = String.fromCharCode(rev);
+ 	    document.write(code);
+ 	}
+ }
+</script>
+<input type="text" id="str" />
+<input type="button" onclick="reverse();" value="Reverse" />
+</body>
+</html>
